@@ -9,5 +9,4 @@ from app import views
 @app.route('/')
 @app.route('/pitches')
 def index():
-    return("<h2>This Works</h2>")
-    # return render_template('index.html')
+    return render_template('index.html')
