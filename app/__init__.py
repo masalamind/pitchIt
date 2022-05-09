@@ -17,7 +17,15 @@ def index():
 def register():
     return render_template('signup.html')
 
-@app.route('/signin')
+
 @app.route('/login')
 def signin():
     return render_template('login.html')
+
+@app.route('/bookmarks')
+def bookmarks():
+    return render_template('bookmarked.html')
+
+@app.route('/profile')
+def profile():
+    return render_template('user_profile.html')
