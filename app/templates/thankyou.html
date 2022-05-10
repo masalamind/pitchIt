@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -8,11 +7,7 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
-    {% block head %}
-      <title>PitchIt - {% block title %}{% endblock %}</title>
-
-    {% endblock %}
-
+    <title>thank you</title>
 
   </head>
 
@@ -27,15 +22,15 @@
           </ul>
 
         </div>
-
         <nav>
-         <div class="logo"><a href="{{ url_for('index') }}">PITCH IT</a></div>
+         <div class="logo"><a href="index.html">PITCH IT</a></div>
           <div class="access">
             <ul class="main-nav">
-              <li class="navigate active-link"><a href="{{ url_for('index') }}">PITCHES</a></li>
-              <li class="navigate"><a href="{{ url_for('bookmarks') }}">BOOKMARKS</a></li>
-              <li class="navigate"><a href="{{ url_for('user_profile') }}">PROFILE</a></li>
+              <li class="navigate"><a href="">PITCHES</a></li>
+              <li class="navigate"><a href="bookmarked.html">BOOKMARKS</a></li>
+              <li class="navigate"><a href="user_profile.html">PROFILE</a></li>
               <li><a href="{{ url_for('new_pitch') }}"><button class="cta-btn"><i class="fa-solid fa-circle-plus"></i> NEW PITCH</button></a></li>
+
 
             </ul>
 
@@ -44,17 +39,19 @@
         </nav>
       </header>
 
-      {% block body %}
+      <div class="main-content" id="thankyou-content">
+        <h4>Thank you for submitting  your {{ thanks_type }} </h4>
+        <p>Your pitch was {{ pitch }}</p>
+      </div>
 
-      {% endblock %}
-
+      <button class="cta-btn"><i class="fa-solid fa-comments"></i> Return to comments</button>
+      <button class="cta-btn secondary-btn"><i class="fa-solid fa-house"></i> Return to home</button>
 
 
     </div> <!-- .main-container -->
 
     <footer>
-
-
+      <div class="p">Phone number</div>
     </footer>
 
     <script src="https://kit.fontawesome.com/d3d56d9400.js" crossorigin="anonymous"></script>

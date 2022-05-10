@@ -61,3 +61,7 @@ class Vote(db.Model):
     downvote = db.Column(db.Boolean)
     pitch_id = db.Column(db.Integer, db.ForeignKey('pitches.pitch_id'))
     voter_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+
+
+
+# db.create_all()

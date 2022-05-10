@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 # from flask_bootstrap import Bootstrap
 # from config import config_options
 from .config import DevConfig
@@ -43,6 +43,21 @@ def bookmarks():
 def profile():
     return render_template('user_profile.html')
 
+@app.route('/add-pitch')
+def new_pitch():
+    return render_template('new_pitch.html')
+
+@app.route('/add-comment')
+def new_comment():
+    return render_template('new_comment.html')
+
+
+@app.route('/thankyou', methods=['GET', 'POST'])
+def thankspage():
+    new_pitch = request.form.get("new-pitch")
+    new_pitch_tag = request.form.get("pitch-tag")
+    thanks = 'comment'
+    return render_template('thankyou.html', thanks_type=thanks, pitch=new_pitch, tag=new_pitch_tag)
 
 # bootstrap = Bootstrap()
 db = SQLAlchemy()
