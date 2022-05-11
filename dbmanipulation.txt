@@ -102,8 +102,17 @@ bookmark_results = Bookmark.query.filter_by(user_id='this_users_id')
 
 
 # DB UPDATE OPERATIONS (crUd)
-# Insert new user
+
+# Insert new user for signup
+
+
 # Insert new pitch
+
+
 # Insert new comment
+
+
 # Insert new Vote
+
+
 # Insert new
